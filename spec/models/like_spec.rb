@@ -6,8 +6,7 @@ RSpec.describe Like, type: :model do
     @post = Post.new(title: 'My first post', text: 'This is my first post.', author: @user, comments_counter: 4, likes_counter: 6)
   end
 
-  it 'should increment likes_counter by 1' do
-    @post.likes_counter
+  it 'should increment likes_counter by 1' do 
     @post.increment!(:likes_counter)
     expect(@post.likes_counter).to eq(7)
   end
