@@ -10,6 +10,10 @@ RSpec.describe 'Post', type: :request do
                expect(response).to have_http_status(:ok)
           end
 
+          it 'Render the right index template for post' do 
+               expect(response).to render_template(:index)
+          end
+
      
      end
 
