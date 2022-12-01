@@ -1,1 +1,11 @@
-<h1>Here is the list of all post by users</h1>
+<section>
+  <div class='single-user'>
+    <div class='user-photo'>
+      <img src='<%= @user.photo %>' alt='<%= @user.name %> thumbnail' />
+    </div>
+    <div class='user-name'>
+      <h2><%= @user.name %></h2>
+      <p>Number of Posts: <%= @user.posts_counter %></p>
+    </div>
+  </div>
+</section>
