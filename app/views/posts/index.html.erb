@@ -20,7 +20,9 @@
       </div>
       <ul class='post-comment'>
         <% if post.five_recent_comments %>
-          <p>No comments added!</p>
+        <% post.five_recent_comments.each do |comment| %>
+          <li><%= comment.author_id %>: <%= comment.text %></li>
+          <% end %>
         <% else %>
           <% post.five_recent_comments.each do |comment| %>
             <li><%= comment.users.name %>: <%= comment.text %></li>

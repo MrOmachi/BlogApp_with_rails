@@ -1,0 +1,7 @@
+.show-user {
+     display: flex;
+}
+
+.users_list{
+     list-style: none;
+}
