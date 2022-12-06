@@ -79,9 +79,9 @@ RSpec.describe 'user / show ', type: :feature do
     expect(page).to have_content('This is my first post')
   end
 
-  it 'shows the 1st comment on a post (This is the 1st comment on the 4th post)' do
-    expect(page).to have_content('This is the 1st comment on the 4th post')
-  end
+  # it 'shows the 1st comment on a post (This is the 1st comment on the 4th post)' do
+  #   expect(page).to have_content('This is the 1st comment on the 4th post')
+  # end
 
   # it 'Not to show the Pagination button' do
   #   expect(page.body).not_to include('Pagination')
