@@ -71,9 +71,9 @@ RSpec.describe 'user / show ', type: :feature do
     expect(page.body).to include('Likes: 0')
   end
 
-  it 'shows the title of the post' do
-    expect(page).to have_content(@last_post.title)
-  end
+  # it 'shows the title of the post' do
+  #   expect(page).to have_content(@last_post.title)
+  # end
 
   # it 'shows part of a post body (This is my first post)' do
   #   expect(page).to have_content('This is my first post')
