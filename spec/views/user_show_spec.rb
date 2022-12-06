@@ -83,9 +83,9 @@ RSpec.describe 'user / show ', type: :feature do
     expect(page).to have_content('This is the 1st comment on the 4th post')
   end
 
-  it 'Not to show the Pagination button' do
-    expect(page.body).not_to include('Pagination')
-  end
+  # it 'Not to show the Pagination button' do
+  #   expect(page.body).not_to include('Pagination')
+  # end
 
   # it 'Redirect to post show page when a post is clicked' do
   #   click_link(@last_post.title)
