@@ -13,6 +13,10 @@ RSpec.describe 'user show ', type: :feature do
      it 'should show the user photo' do
        expect(page).to have_css("img[src*='https://i.imgur.com/1JZrO7A.jpg']")
      end
+
+     it 'should show the user name' do
+      expect(page).to have_content(@user.name)
+    end
 end
 
      
