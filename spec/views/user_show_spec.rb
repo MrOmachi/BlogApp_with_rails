@@ -21,9 +21,9 @@ RSpec.describe 'user show ', type: :feature do
     expect(page).to have_content(@any_post.title)
   end
 
-  # it 'shows part of a post body (This is any post)' do
-  #   expect(page).to have_content('This is any post')
-  # end
+  it 'shows part of a post body (This is any post)' do
+    expect(page).to have_content('This is any post')
+  end
 
   it 'shows the user name of a comment' do
     expect(page).to have_content('Davon')
