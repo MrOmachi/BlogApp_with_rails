@@ -41,5 +41,4 @@ RSpec.describe 'posts/show.html.erb', type: :view do
   it 'shows the comment a user left' do
     expect(page).to have_content('This is the 2nd comment on the 4th post')
   end
-
 end
