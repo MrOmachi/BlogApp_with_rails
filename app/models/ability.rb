@@ -3,17 +3,31 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
-    # Define abilities for the user here. For example:
-      user ||= User.new # guest user (not logged in)
-      can :read, :all
+  # def initialize(user)
+  #   # Define abilities for the user here. For example:
+  #     user ||= User.new # guest user (not logged in)
+  #     can :read, :all
   
-      can :manage, :all if user.role == 'admin'
-      return unless user.present?
+  #     can :manage, :all if user.role == 'admin'
+  #     return unless user.present?
   
-      can :manage, Post, author_id: user.id
-      can :manage, Comment, author_id: user.id
+  #     can :manage, Post, author_id: user.id
+  #     can :manage, Comment, author_id: user.id
+  #   end
+
+
+    def initialize(user)
+      if user.is?(:admin)
+      can :manage, :all
+    else
+      can :destroy, Post, author: user
+      can :destroy, Comment, author: user
     end
+
+    end
+
+
+
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
@@ -32,4 +46,4 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
   end
-end
+

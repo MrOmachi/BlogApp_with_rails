@@ -9,7 +9,9 @@
 
      <div class = 'd-flex'>
 
+     <% if can? :destroy , @post %>
      <%= button_to 'Delete Post', user_post_path(@user, @post), method: :delete, class: "btn btn-danger mx-3" %>
+     <% end %>
 
      <%= render "likes/add_like"%>
      </div>
@@ -28,7 +30,9 @@
           </span>
         </p>
       </div>
+      <% if can? :destroy , comment %>
       <%= button_to 'Delete comment', user_post_comment_path(@user , @post , comment), method: :delete, class: "btn btn-dark" %>
+      <% end %>
 
       
     <% end %>
