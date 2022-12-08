@@ -17,7 +17,7 @@ class Ability
 
 
     def initialize(user)
-      if user.is?(:admin)
+      if user.admin
       can :manage, :all
     else
       can :destroy, Post, author: user
