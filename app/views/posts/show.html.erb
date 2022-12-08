@@ -7,9 +7,8 @@
     <p><%= @post.text %></p>
      <p class="comment-text">Comments: <%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %></p>
 
-    
 
-     <%= button_to 'Delete', user_post_path(@user, @post), method: :delete, class: "btn btn-danger" %>
+     <%= button_to 'Delete Post', user_post_path(@user, @post), method: :delete, class: "btn btn-danger" %>
 
 
   </div>
