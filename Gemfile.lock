@@ -74,6 +74,7 @@ GEM
     bootsnap (1.14.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancan (1.6.10)
     capybara (3.38.0)
       addressable
       matrix
@@ -269,6 +270,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
+  cancan
   capybara
   database_cleaner
   debug
